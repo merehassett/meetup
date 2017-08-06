@@ -1,0 +1,22 @@
+{
+  "name": "meetup",
+  "version": "1.0.0",
+  "description": "Learn how to consume the Meetup API with Node/Express",
+  "scripts": {},
+  "keywords": [
+    "tutorials",
+    "node",
+    "express",
+    "apis",
+    "meetup"
+  ],
+  "author": "Meredith Hassett",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "ejs": "2.4.1",
+    "install": "^0.8.8",
+    "npm": "^4.4.4",
+    "request": "^2.81.0"
+  }
+}

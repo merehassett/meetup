@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meetup Info</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <meta name="viewport" content="width=700, user-scalable=no">
+  <script type="text/javascript" src="meetupData.js"></script>
+</head>
+<body onload="getJSON()">
+<div class='wrapper'>
+    <div class='app'>
+      <div class='content'>
+        <div class='header'>
+          <div class='app_bar' >
+            <div class='info gui-component'>
+              HTML Meetup App with JS
+            </div>
+          </div>
+        </div>
+        <div class='inner_content'>
+              <div class='header' >
+                <img id='meetupImage' >
+              </div>
+              <p>Here is some info on the meetups you requests:</p>
+              <div id ='toolbar'>
+                <div class ='button flat'>Name: <span id = 'meetupName'></span></div>
+                <div class ='button flat'>Location: <span id = 'meetupLocation'></span></div>
+                <div class='button flat'>Category: <span id = 'meetupCat'></span></div>
+
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

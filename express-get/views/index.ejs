@@ -1,0 +1,19 @@
+<h1>Meetup app</h1>
+
+<p> Search for Meetups about:</p>
+<form action="/" method="POST">
+  <input type="input" name="q">
+  <button>Search</button>
+</form>
+
+
+<h3>Top result for <%= search %></h3>
+<% if (results) { %>
+  <img alt="Meetup Logo" height="20%" src=<%= results.image %> >
+  <p><%= results.name %> - <em><%= results.location %></em> <br />
+    <b>Category:</b> <%= results.category %>
+  </p>
+
+<% } else { %>
+  <p>No Results</p>
+<% } %>

@@ -1,0 +1,247 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300,400italic,700);
+
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Roboto;
+	box-sizing: border-box;
+	min-width: 450px;
+	background: #C4DEFF;
+}
+
+.wrapper {height: 100%;}
+
+.app {
+	display: flex;
+	position: relative;
+	height: 100%;
+	padding: 0;
+}
+
+.app .footer {
+	text-align: left;
+	padding: .2em 1em;
+	font-weight: 300;
+	transition: all 175ms linear;
+}
+
+
+
+.app .content {
+	order: 3;
+	flex-grow: 1;
+	box-sizing: border-box;
+}
+
+.app .content .header .app_bar {
+	display: flex;
+	flex-grow: 1;
+}
+
+.app .content .header .app_bar .info {
+	flex-grow: 1;
+	padding: 2px 16px;
+	line-height: 60px;
+	font-size: 3.5rem;
+	font-weight: 500;
+	color: #008FC5;
+	vertical-align: top;
+}
+
+.app .content .header {
+	display: flex;
+	background: #faebd7;
+}
+
+.app .content .header [for=hamburger] div {
+	background: #faebd7;
+	height: 4px;
+	width: 50%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: absolute;
+	left: 25%;
+	transition: all 175ms linear;
+}
+
+.app .content .header .app_bar .actions {
+	height: 64px;
+	width: 64px;
+	position: relative;
+	cursor: pointer;
+}
+
+.app .content .header .app_bar .actions div.dot {
+	background: #FA8072;
+	height: 8px;
+	width: 8px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 100%;
+}
+
+.app .content .header .app_bar .actions:hover div.dot {
+	animation-name: dot_wiggle;
+	animation-direction: alternate;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+.app #hamburger, .app #actions-icon {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+.app .menu {
+	order: 1;
+	overflow: hidden;
+	background: #faebd7;
+	color: #FA8072;
+	display: flex;
+	flex-direction: column;
+}
+
+.app .menu .header {
+	flex-grow: 1;
+	position: relative;
+	background: url("http://data3.whicdn.com/images/44926339/large.jpg") no-repeat;
+	background-size: cover;
+}
+
+.app .menu .items .item:hover {background: rgba(0,0,0,.1);}
+
+.app .content {
+	order: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.app .content {}
+
+.app .content .inner_content {
+	background: #c4deff;
+	flex-grow: 1;
+	padding: .64em 84px 1em 84px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.app .content .footer {background: #546e7a;}
+
+.deck {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.deck .card {
+	min-width: 300px;
+	background: #eee;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	width: 20em;
+	margin: .5em .5em 0 0;
+	position: relative;
+	transition: all 350ms linear;
+	bottom: 0;
+}
+
+.deck .card .toolbar {
+	display: flex;
+	padding: .25em 0;
+}
+
+.deck .card .header {
+	background: transparent;
+	position: relative;
+}
+
+.deck .card .header img {
+	max-height: 250px;
+	min-width: 300px;
+	width: auto;
+	margin: 0 auto;
+	-webkit-filter: grayscale(.3) blur(2px);
+	transition: all 175ms linear;
+	position: relative;
+}
+
+.deck .card:hover .header img {-webkit-filter: grayscale(0) blur(0px);}
+
+.deck .card .header[data-title]:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 2em;
+	min-height: 2em;
+	font-size: 16px;
+	content: attr(data-title);
+	text-align: center;
+	background: rgba(0,0,0,.4);
+	color: white;
+	transition: all 350ms linear;
+}
+
+.deck .card:hover .header[data-title]:after {}
+
+.deck .card:hover {
+	bottom: 4px;
+	box-shadow: rgba(0,0,0,.5) 0 3px 4px 1px;
+}
+
+.deck .card p {
+	font-size: 14px;
+	padding: .1em .8em;
+	text-align: justify;
+}
+
+.button.flat {
+	background: transparent;
+	color: #b0120a;
+	transition: all 175ms linear;
+	text-align: left;
+}
+
+.button.flat:hover {
+	background: rgba(176, 18, 10,.66);
+	color: #fde0dc;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	margin: 0 2px;
+	padding: 5px;
+}
+
+::-webkit-scrollbar:window-inactive,
+::-webkit-scrollbar-track:window-inactive,
+::-webkit-scrollbar-thumb:window-inactive {visibility: hidden;}
+
+::-webkit-scrollbar-track {
+	visibility: visible;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+	background: #eceff1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #263238;
+	margin: 1px;
+}
+
+@media (min-width: 1280px) {
+	[for=hamburger] {
+		opacity:0;
+	}
+	#hamburger ~.menu {
+		min-width: calc(15% + 150px);
+		flex-grow: 1;
+	}
+}
