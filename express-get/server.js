@@ -25,10 +25,10 @@ app.use(bodyParser.json());
 
 // define some default values to use for our app
 var defaultMeetup = {
-  name:'ChickTech Austin',
-  location: 'Austin, TX',
-  category:"Business & Career",
-  image: "http://makerfaireaustin.com/wp-content/uploads/2016/03/ChickTech-Austin-Logo.jpg"
+  name:'Women Who Code DC',
+  location: 'Washington, DC',
+  category:"Tech",
+  image: "https://secure.meetupstatic.com/photos/event/2/e/a/d/600_450131949.jpeg"
 },
 defaultImage = "http://s2.quickmeme.com/img/d7/d7578f862475ecaf98064b381cda998a38409dea1123e07ba0b9babd34255360.jpg";
 
@@ -40,7 +40,7 @@ defaultImage = "http://s2.quickmeme.com/img/d7/d7578f862475ecaf98064b381cda998a3
 // is the route that express uses when we visit
 // our initial page.
 app.get('/', function(req, res){
-    res.render('index', {results: defaultMeetup, search: 'ChickTech'});
+    res.render('index', {results: defaultMeetup, search: 'Women Who Code'});
 });
 
 
